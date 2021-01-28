@@ -51,4 +51,26 @@ describe('like', () => {
   it('should pass properly comparing a null value with null', () => {
     expect(null).to.have.like(null);
   });
+
+  it('shoud work fine comparing a recursive object to itself', () => {
+    const test: any = {};
+    test.test = test;
+
+    expect(test).to.be.like(test);
+  });
+
+  it('shoud throw and treated error when comparing a recursive object with something different', () => {
+    let error: any;
+
+    try {
+      const test: any = {};
+      test.test = test;
+
+      expect(test).to.be.like({ test: 'something else' });
+    } catch (err) {
+      error = err;
+    }
+
+    expect(error.message).to.match(/Value's not like the expected.+/);
+  });
 });
