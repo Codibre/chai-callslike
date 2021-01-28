@@ -12,7 +12,7 @@
 
 ###  mustGoDeep
 
-▸ **mustGoDeep**(`a`: unknown, `e`: unknown): *boolean*
+▸ **mustGoDeep**(`a`: unknown, `e`: unknown, `references`: Set‹unknown›): *boolean*
 
 **Parameters:**
 
@@ -20,5 +20,6 @@ Name | Type |
 ------ | ------ |
 `a` | unknown |
 `e` | unknown |
+`references` | Set‹unknown› |
 
 **Returns:** *boolean*

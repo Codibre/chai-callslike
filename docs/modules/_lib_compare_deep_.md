@@ -12,7 +12,7 @@
 
 ###  compareDeep
 
-▸ **compareDeep**(`actual`: any, `expected`: any, `tab`: string): *string*
+▸ **compareDeep**(`actual`: any, `expected`: any, `tab`: string, `references`: Set‹unknown›): *string*
 
 **Parameters:**
 
@@ -21,5 +21,6 @@ Name | Type |
 `actual` | any |
 `expected` | any |
 `tab` | string |
+`references` | Set‹unknown› |
 
 **Returns:** *string*
